@@ -52,7 +52,7 @@ $(document).ready(function(){
 	if (name){
 
 		var turtle = new Object();
-		turtle.happiness = getCookie("happiness");
+		turtle.happiness = parseInt(getCookie("happiness"));
 		alert(turtle.happiness);
 
 		floor();
