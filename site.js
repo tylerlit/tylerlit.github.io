@@ -38,7 +38,7 @@ $(document).ready(function(){
 	$("#name_form").submit( function(e){
 		e.preventDefault();
 		setCookie("name", $("#name").val(), 999);
-		setCookie("happiness", 3, 999);
+		setCookie("happiness", '3', 999);
 		$("#name").fadeOut();
 		floor();
 	});
