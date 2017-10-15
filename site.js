@@ -47,7 +47,7 @@ $(document).ready(function(){
 	if (name != ""){
 		floor();
 	}
-	else {
+	if (name == ""){
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 
