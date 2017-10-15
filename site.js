@@ -51,6 +51,7 @@ $(document).ready(function(){
 	if (name != ""){
 		alert(name);
 		floor();
+		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 	}
 	setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 
