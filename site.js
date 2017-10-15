@@ -51,7 +51,6 @@ $(document).ready(function(){
 		floor();
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 	} else {
-		alert("this should not happen");
 		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 	}
 });
