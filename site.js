@@ -47,14 +47,11 @@ $(document).ready(function(){
 	setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 
 	var name = getCookie("name");
-	alert(name);
-	if (name != ""){
+	if (name){
 		alert(name);
 		floor();
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
-	}
-	if (name == "") {
+	} else {
 		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 	}
-
 });
