@@ -53,7 +53,8 @@ $(document).ready(function(){
 		floor();
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 	}
-	setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
-
+	if (name == "") {
+		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
+	}
 
 });
