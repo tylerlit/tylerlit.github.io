@@ -48,10 +48,10 @@ $(document).ready(function(){
 
 	var name = getCookie("name");
 	if (name){
-		alert(name);
 		floor();
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 	} else {
+		alert("this should not happen");
 		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 	}
 });
