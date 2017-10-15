@@ -42,12 +42,15 @@ $(document).ready(function(){
 		floor();
 	});
 
-	setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
-	setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 
 	var name = getCookie("name");
 	if (name != ""){
 		floor();
+	}
+	else {
+		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
+		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
+
 	}
 
 
