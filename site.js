@@ -38,6 +38,7 @@ $(document).ready(function(){
 	$("#name_form").submit( function(e){
 		e.preventDefault();
 		setCookie("name", $("#name").val(), 999);
+		setCookie("happiness", 3, 999);
 		$("#name").fadeOut();
 		floor();
 	});
@@ -47,9 +48,16 @@ $(document).ready(function(){
 	setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 
 	var name = getCookie("name");
+	//happiness level
 	if (name){
+
+		var turtle = new Object();
+		turtle.happiness = getCookie("happiness");
+		alert(turtle.happiness);
+
 		floor();
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
+
 	} else {
 		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 	}
