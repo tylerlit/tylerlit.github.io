@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-	setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
-	setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
-
 	function setCookie(cname, cvalue, exdays) {
 		var d = new Date();
 		d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -26,6 +23,12 @@ $(document).ready(function(){
 		return "";
 	}
 
+	function floor() {
+		$("#floor").animate( {
+			width: '100%'
+		});
+	}
+
 	$(".click_turtle").on("click", function(e){
 		e.preventDefault();
 		$("#turtle").fadeOut();
@@ -33,14 +36,18 @@ $(document).ready(function(){
 	});
 
 	$("#name_form").submit( function(e){
-
+		e.preventDefault();
 		setCookie("name", $("#name").val(), 999);
-		return false;
+		$("#name").fadeOut();
+		floor();
 	});
+
+	setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
+	setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 
 	var name = getCookie("name");
 	if (name != ""){
-		alert(name);
+		floor();
 	}
 
 
