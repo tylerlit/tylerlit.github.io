@@ -43,15 +43,16 @@ $(document).ready(function(){
 	});
 
 
+
+	setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
+
 	var name = getCookie("name");
+	alert(name);
 	if (name != ""){
+		alert(name);
 		floor();
 	}
-	if (name == ""){
-		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
-		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
-
-	}
+	setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 
 
 });
