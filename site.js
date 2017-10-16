@@ -35,6 +35,7 @@ $(document).ready(function(){
 
 		var id = "#turtle" + getCookie("happiness");
 		var w = getCookie("size") + '%';
+		alert(id);
 
 		$(id).animate( {
 			width: w
@@ -71,7 +72,6 @@ $(document).ready(function(){
 		floor();
 		updateTurtle();
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
-
 
 	} else {
 		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
