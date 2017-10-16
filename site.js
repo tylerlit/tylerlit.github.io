@@ -33,7 +33,7 @@ $(document).ready(function(){
 		turtle.happiness = Number(getCookie("happiness"));
 		turtle.size = Number(getCookie("size"));
 
-		var id = "#turtle" + getCookie("happiness");
+		id = getCookie("happiness");
 		var w = getCookie("size") + '%';
 		alert(id);
 
