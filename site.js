@@ -29,6 +29,14 @@ $(document).ready(function(){
 		});
 	}
 
+	function updateTurtle() {
+		turtle.happiness = Number(getCookie("happiness"));
+		turtle.size = Number(getCookie("size"));
+		alert(getCookie("happiness"));
+		
+	}
+
+
 	$(".click_turtle").on("click", function(e){
 		e.preventDefault();
 		$("#turtle").fadeOut();
@@ -38,9 +46,11 @@ $(document).ready(function(){
 	$("#name_form").submit( function(e){
 		e.preventDefault();
 		setCookie("name", $("#name").val(), 999);
-		setCookie("happiness", '3', 999);
+		setCookie("happiness", "3", 999);
+		setCookie("size", "5", 999);
 		$("#name").fadeOut();
 		floor();
+		updateTurtle();
 	});
 
 
@@ -48,15 +58,14 @@ $(document).ready(function(){
 	setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 
 	var name = getCookie("name");
-	//happiness level
 	if (name){
 
 		var turtle = new Object();
 		turtle.happiness = Number(getCookie("happiness"));
-		alert(turtle.happiness);
 
 		floor();
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
+
 
 	} else {
 		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
