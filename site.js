@@ -34,14 +34,7 @@ $(document).ready(function(){
 		turtle.size = Number(getCookie("size"));
 
 		id = getCookie("happiness");
-		var w = getCookie("size") + '%';
 		alert(id);
-
-		$(id).animate( {
-			width: w
-		});
-
-		
 	}
 
 
