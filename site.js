@@ -45,6 +45,7 @@ $(document).ready(function(){
 
 	$("#name_form").submit( function(e){
 		e.preventDefault();
+		var turtle = new Object();
 		setCookie("name", $("#name").val(), 999);
 		setCookie("happiness", "3", 999);
 		setCookie("size", "5", 999);
@@ -59,11 +60,9 @@ $(document).ready(function(){
 
 	var name = getCookie("name");
 	if (name){
-
 		var turtle = new Object();
-		turtle.happiness = Number(getCookie("happiness"));
-
 		floor();
+		updateTurtle();
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 
 
