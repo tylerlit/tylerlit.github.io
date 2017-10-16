@@ -34,7 +34,8 @@ $(document).ready(function(){
 		turtle.size = Number(getCookie("size"));
 		var id = "#turtle" + getCookie("happiness");
 
-		alert(id);
+		$(id).show();
+
 	}
 
 
