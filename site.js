@@ -33,7 +33,7 @@ $(document).ready(function(){
 		turtle.happiness = Number(getCookie("happiness"));
 		turtle.size = getCookie("size");
 		var w = turtle.size + '%';
-		var t = { width: w };
+		var t = { 'width': w };
 
 		if (turtle.happiness == 3){
 			$("#turtle3").animate(t);
