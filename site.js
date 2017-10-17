@@ -36,7 +36,7 @@ $(document).ready(function(){
 		alert(w);
 		wnew = { 'width': w };
 
-		if (turtle.happiness == 3){
+		if (turtle.happiness == '3'){
 			alert(w);
 			$("#turtle3").animate(wnew);
 		}
