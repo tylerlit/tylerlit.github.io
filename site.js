@@ -56,7 +56,7 @@ $(document).ready(function(){
 		setCookie("size", "5", 999);
 		$("#name").fadeOut();
 		floor();
-		updateTurtle();
+		setTimeout(updateTurtle(), 500);
 	});
 
 
@@ -71,6 +71,7 @@ $(document).ready(function(){
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 
 	} else {
+		floor();
 		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 	}
 });
