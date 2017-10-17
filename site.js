@@ -30,9 +30,10 @@ $(document).ready(function(){
 	}
 
 	function updateTurtle() {
+		alert('hi');
 		turtle.happiness = Number(getCookie("happiness"));
 		turtle.size = getCookie("size");
-
+		alert('hello');
 		var w = size + '%';
 		alert(w);
 		var t = { width: w };
