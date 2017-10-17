@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 	function updateTurtle() {
 		turtle.happiness = Number(getCookie("happiness"));
-		turtle.size = Number(getCookie("size"));
+		turtle.size = getCookie("size");
 
 		var w = size + '%';
 		var t = { width: w };
