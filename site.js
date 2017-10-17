@@ -31,9 +31,10 @@ $(document).ready(function(){
 
 	function updateTurtle() {
 		turtle.happiness = Number(getCookie("happiness"));
-		turtle.size = getCookie("size");
+		turtle.size = Number(getCookie("size"));
 
 		var w = size + '%';
+		alert(w);
 		var t = { width: w };
 
 		if (happiness == 3){
