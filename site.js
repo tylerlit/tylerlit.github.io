@@ -36,7 +36,7 @@ $(document).ready(function(){
 		var t = { width: w };
 
 		if (turtle.happiness == 3){
-			$("#turtle3").animate( { t });
+			$("#turtle3").animate(t);
 		}
 	}
 
