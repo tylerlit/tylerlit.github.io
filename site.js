@@ -32,11 +32,13 @@ $(document).ready(function(){
 	function updateTurtle() {
 		turtle.happiness = Number(getCookie("happiness"));
 		turtle.size = Number(getCookie("size"));
-		var id = "#turtle" + getCookie("happiness");
 
-		$(id).animate( {
-			width: '5%'
-		});
+		var w = size + '%';
+		var t = { width: w };
+
+		if (happiness == 3){
+			$("#turtle3").animate( { t });
+		}
 	}
 
 
