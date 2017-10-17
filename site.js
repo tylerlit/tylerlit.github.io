@@ -34,7 +34,6 @@ $(document).ready(function(){
 		turtle.size = getCookie("size");
 		var w = turtle.size + '%';
 		wnew = { width: w };
-		alert(wnew);
 		if (turtle.happiness == '3'){
 			$("#turtle3").animate(wnew);
 		}
