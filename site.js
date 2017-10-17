@@ -65,7 +65,7 @@ $(document).ready(function(){
 	if (name){
 		var turtle = new Object();
 		floor();
-		updateTurtle();
+		setTimeout(updateTurtle(), 500);
 		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
 
 	} else {
