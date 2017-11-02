@@ -24,19 +24,16 @@ $(document).ready(function(){
 	}
 
 	function floor() {
-		$("#floor").animate( {
-			width: '100%'
-		});
+		$("#floor").animate({ width: '100%' }, updateTurtle());
 	}
 
 	function updateTurtle() {
-		turtle.happiness = Number(getCookie("happiness"));
-		turtle.size = getCookie("size");
-		var w = turtle.size + '%';
+		var w = getCookie("size") + '%';
 		var wnew = { width: w };
-		if (turtle.happiness == '3'){
-			$("#turtle3").animate(wnew);
-		}
+
+		var t = "#turtle" + getCookie("happiness");
+
+		$(t).animate(wnew);
 	}
 
 
@@ -48,28 +45,22 @@ $(document).ready(function(){
 
 	$("#name_form").submit( function(e){
 		e.preventDefault();
-		var turtle = new Object();
 		setCookie("name", $("#name").val(), 999);
 		setCookie("happiness", "3", 999);
 		setCookie("size", "5", 999);
 		$("#name").fadeOut();
 		floor();
-		setTimeout(updateTurtle(), 500);
 	});
 
 
-
+	//always show text
 	setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
+
 
 	var name = getCookie("name");
 	if (name){
-		var turtle = new Object();
 		floor();
-		setTimeout(updateTurtle(), 500);
-		setTimeout(function() { $("#text").fadeIn("slow"); }, 1000);
-
 	} else {
-		floor();
 		setTimeout(function() { $("#turtle").fadeIn(); }, 1500);
 	}
 });
